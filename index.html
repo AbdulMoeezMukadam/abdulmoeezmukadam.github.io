@@ -288,9 +288,37 @@
     border: 1px solid var(--line);
     border-radius: 10px;
     padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s, transform .15s, box-shadow .15s;
   }
+  .cert:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15, 42, 67, 0.08);
+  }
+  .cert:hover .cert-arrow { color: var(--accent); transform: translate(2px, -2px); }
   .cert .name { font-weight: 600; font-size: 14.5px; color: var(--navy); }
   .cert .issuer { font-size: 13px; color: var(--slate); margin-top: 2px; }
+  .cert-arrow {
+    font-size: 17px;
+    color: var(--slate);
+    flex-shrink: 0;
+    transition: color .15s, transform .15s;
+  }
+  .entry-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .entry-link:hover { text-decoration: underline; }
 
   footer {
     text-align: center;
@@ -479,6 +507,7 @@
           <li>Analyzed and documented system behaviors in Linux distributions (PureOS, Arch Linux), focusing on Flatpak applications on Phosh and GNOME configurations.</li>
           <li>Strengthened skills in Linux systems, cybersecurity research, and technical documentation through detailed analysis and clear communication of complex findings.</li>
         </ul>
+        <a class="entry-link" href="certs/deepcytes-fellowship.pdf" target="_blank" rel="noopener">View fellowship certificate ↗</a>
       </div>
     </section>
 
@@ -541,24 +570,66 @@
     </section>
 
     <section class="section" id="certifications">
-      <div class="section-label">Certifications &amp; trainings</div>
+      <div class="section-label">Certifications</div>
       <div class="cert-list">
-        <div class="cert">
-          <div class="name">Certified Ethical Hacker (CEH v13)</div>
-          <div class="issuer">EC-Council</div>
-        </div>
-        <div class="cert">
-          <div class="name">Google Cybersecurity Professional Certification</div>
-          <div class="issuer">Google</div>
-        </div>
-        <div class="cert">
-          <div class="name">Azure AI Fundamentals</div>
-          <div class="issuer">Microsoft Certified</div>
-        </div>
-        <div class="cert">
-          <div class="name">Introduction to Cybersecurity</div>
-          <div class="issuer">Cisco</div>
-        </div>
+        <a class="cert" href="certs/ceh-v13.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Certified Ethical Hacker (CEH v13)</div><div class="issuer">EC-Council · Jan 2025</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/google-cybersecurity.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Google Cybersecurity Professional Certificate</div><div class="issuer">Google · Coursera · Dec 2025</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/azure-ai-fundamentals.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Azure AI Fundamentals</div><div class="issuer">Microsoft Certified · May 2023</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/cisco-intro-cybersecurity.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Introduction to Cybersecurity</div><div class="issuer">Cisco Networking Academy · Jan 2025</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/cisco-iot.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Introduction to IoT &amp; Digital Transformation</div><div class="issuer">Cisco Networking Academy · Apr 2025</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/aws-cloud-architecting.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">AWS Academy Cloud Architecting</div><div class="issuer">AWS Academy · Aug 2024</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/aws-cloud-security-foundations.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">AWS Academy Cloud Security Foundations</div><div class="issuer">AWS Academy · Jun 2024</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/aws-cloud-foundations.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">AWS Academy Cloud Foundations</div><div class="issuer">AWS Academy · May 2024</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="training">
+      <div class="section-label">Training &amp; job simulations</div>
+      <div class="cert-list">
+        <a class="cert" href="certs/internshala-ethical-hacking.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Ethical Hacking — 8-week training <span class="badge">94%</span></div><div class="issuer">Internshala · Aug 2024</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/forage-tcs-cyber-analyst.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Cybersecurity Analyst Job Simulation (IAM)</div><div class="issuer">TCS · Forage · Jun 2024</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/forage-mastercard-cyber.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Cybersecurity Job Simulation (Phishing)</div><div class="issuer">Mastercard · Forage · Jun 2024</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/ai-with-python.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Artificial Intelligence with Python</div><div class="issuer">Coincent · IIT Guwahati · Oct 2022</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a class="cert" href="certs/internshala-job-prep.pdf" target="_blank" rel="noopener">
+          <div class="cert-body"><div class="name">Internship &amp; Job Preparation <span class="badge">Top performer</span></div><div class="issuer">Internshala · Sep 2024</div></div>
+          <span class="cert-arrow">↗</span>
+        </a>
       </div>
     </section>
 
@@ -588,6 +659,7 @@
           <span class="dates">2024</span>
         </div>
         <p>Participated in the Capture the Flag cybersecurity event.</p>
+        <a class="entry-link" href="certs/kpmg-ctf.pdf" target="_blank" rel="noopener">View certificate ↗</a>
       </div>
 
       <div class="entry">
@@ -597,6 +669,7 @@
         </div>
         <div class="org">Google Developer Student Club</div>
         <p>Contributed to projects enhancing online engagement.</p>
+        <a class="entry-link" href="certs/gdsc-web-development.pdf" target="_blank" rel="noopener">View certificate ↗</a>
       </div>
 
       <div class="entry">
